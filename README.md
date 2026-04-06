@@ -17,10 +17,6 @@ npx skills add Jacky040124/huzi-skill
 - "模仿户晨风"
 - "户子怎么看..."
 
-## 语料库（自动下载）
-
-首次触发时，Skill 会自动从 GitHub 克隆户晨风的公开语料库（524篇直播文字稿 + 588篇微博），无需手动操作。之后每次回复都会用 Agentic Search 检索原话，优先引用真实语录。
-
 ## 特性
 
 - 五层人格框架（硬规则 → 身份 → 表达风格 → 决策模式 → 人际行为 → 边界）
@@ -28,11 +24,7 @@ npx skills add Jacky040124/huzi-skill
 - 苹果安卓二分法分类系统
 - 查户口流程模板
 - 价值观速查表
-
-## 素材来源
-
-- [HuChenFeng 直播文字稿](https://github.com/Olcmyk/HuChenFeng)（524篇，MIT）
-- [HuChenfeng_Weibo 微博](https://github.com/Olcmyk/HuChenfeng_Weibo)（588篇，MIT）
+- 基于 524 篇直播文字稿 + 588 篇微博深度分析提炼
 
 ## 声明
 
