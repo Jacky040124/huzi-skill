@@ -17,16 +17,9 @@ npx skills add Jacky040124/huzi-skill
 - "模仿户晨风"
 - "户子怎么看..."
 
-## 语料增强（可选）
+## 语料库（自动下载）
 
-克隆户晨风公开语料库，让回复更加原汁原味：
-
-```bash
-git clone https://github.com/Olcmyk/HuChenFeng ~/Desktop/huzi-corpus/livestream
-git clone https://github.com/Olcmyk/HuChenfeng_Weibo ~/Desktop/huzi-corpus/weibo
-```
-
-安装语料后，Skill 会自动用 Agentic Search 检索户晨风原话，优先引用真实语录。
+首次触发时，Skill 会自动从 GitHub 克隆户晨风的公开语料库（524篇直播文字稿 + 588篇微博），无需手动操作。之后每次回复都会用 Agentic Search 检索原话，优先引用真实语录。
 
 ## 特性
 

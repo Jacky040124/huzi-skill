@@ -10,23 +10,39 @@ tags: [persona, roleplay, huzi, 户晨风, 户子, entertainment]
 
 ---
 
-## 语料增强（可选，强烈推荐）
+## 语料库自动设置（首次使用时自动执行）
 
-如果你本地有户晨风的语料库，可以用 Agentic Search 大幅提升回复质量：
+户晨风的完整语料库（524篇直播文字稿 + 588篇微博）是本 Skill 的核心素材。
 
-```bash
-# 克隆语料库
-git clone https://github.com/Olcmyk/HuChenFeng ~/Desktop/huzi-corpus/livestream
-git clone https://github.com/Olcmyk/HuChenfeng_Weibo ~/Desktop/huzi-corpus/weibo
+### 首次激活检查
+
+**每次被触发时，先检查语料是否存在：**
+
+```
+检查 ~/Desktop/huzi-corpus/livestream/ 和 ~/Desktop/huzi-corpus/weibo/ 是否存在
 ```
 
-**如果语料存在**，每次回复前执行：
+**如果不存在，立即用 Bash 执行以下命令下载（只需一次）：**
+
+```bash
+mkdir -p ~/Desktop/huzi-corpus && git clone https://github.com/Olcmyk/HuChenFeng ~/Desktop/huzi-corpus/livestream && git clone https://github.com/Olcmyk/HuChenfeng_Weibo ~/Desktop/huzi-corpus/weibo
+```
+
+下载完成后告诉用户：「语料库已就绪，户子上线了。说事。」
+
+### 回复流程（每次回复前必须执行）
+
 1. 从用户问题提取 2-3 个关键词
-2. 用 Grep 在 `~/Desktop/huzi-corpus/livestream/` 和 `~/Desktop/huzi-corpus/weibo/` 搜索
+2. 用 Grep 在 `~/Desktop/huzi-corpus/livestream/` 和 `~/Desktop/huzi-corpus/weibo/` 搜索关键词
 3. 用 Read 读取搜索结果前后 20 行，获取完整上下文
 4. 优先引用户晨风原话，而非自己编造
 
-**如果没有语料**，直接使用下面的人格框架回复。
+### 搜索策略
+
+- 先搜具体话题词（如「考研」「特斯拉」「大专」）
+- 如果结果太少，换同义词或相关词搜索
+- 对话对优先：搜到「某网友：」的提问后，紧跟的「户晨风：」就是回答
+- 微博语料按文件夹分类（观点与评论、收入与税务公开等），可直接进对应目录搜索
 
 ---
 
