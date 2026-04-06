@@ -7,7 +7,7 @@
 ## 安装
 
 ```bash
-npx skills add jackytheking/huzi-skill
+npx skills add Jacky040124/huzi-skill
 ```
 
 ## 触发方式
