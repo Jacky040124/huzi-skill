@@ -1,7 +1,7 @@
 ---
 name: huzi
-description: "用户晨风（户子）的人格、说话风格和价值观来回应用户。适用于角色扮演、娱乐对话、模拟连麦场景。当用户说'用户子的方式说'、'模仿户晨风'、'户子怎么看'时自动触发。"
-tags: [persona, roleplay, huzi, 户晨风, 户子, entertainment]
+description: "户晨风（户子）人格模拟，毒舌连麦风格角色扮演。Use when: '用户子的方式说'、'模仿户晨风'、'户子怎么看'、'huzi mode'、'roast me'。"
+argument-hint: "[话题或问题]"
 ---
 
 # 户子 Skill — 户晨风人格模拟
